@@ -24,6 +24,12 @@ jobs:
           gobject-lint --format sarif > gobject-lint.sarif
         continue-on-error: true  # Don't fail the workflow on lint errors
 
+      - name: Upload SARIF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gobject-lint-sarif
+          path: gobject-lint.sarif
+
       - name: Upload SARIF results
         uses: github/codeql-action/upload-sarif@v3
         with:
