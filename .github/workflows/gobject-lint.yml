@@ -17,7 +17,7 @@ jobs:
 
       - name: Install gobject-lint
         run: |
-          cargo install --git https://github.com/bilelmoussaoui/gobject-lint --package gobject-lint
+          cargo install --git https://github.com/bilelmoussaoui/gobject-lint gobject-lint
 
       - name: Run gobject-lint
         run: |
